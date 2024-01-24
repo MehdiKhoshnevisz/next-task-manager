@@ -1,16 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Checkbox } from "@nextui-org/react";
 import { Input } from "@nextui-org/react";
 
-const TaskItem = ({ caption = "", active = false }) => {
-  return (
-    <li className="border-t-1 py-4">
-      <Checkbox radius="sm">{caption}</Checkbox>
-    </li>
-  );
-};
+import Task from "@/components/Task";
 
 export default function Home() {
   const [tasks, setTasks] = useState([
@@ -44,7 +37,7 @@ export default function Home() {
 
         <ul>
           {tasks.map((item, index) => (
-            <TaskItem caption={item.caption} key={index} />
+            <Task caption={item.caption} key={index} />
           ))}
         </ul>
 
