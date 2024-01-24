@@ -7,9 +7,7 @@ import { Input } from "@nextui-org/react";
 const TaskItem = ({ caption = "", active = false }) => {
   return (
     <li className="border-t-1 py-4">
-      <Checkbox defaultSelected radius="sm">
-        {caption}
-      </Checkbox>
+      <Checkbox radius="sm">{caption}</Checkbox>
     </li>
   );
 };
