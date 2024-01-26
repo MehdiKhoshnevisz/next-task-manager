@@ -9,7 +9,7 @@ interface TasksInterface {
 }
 
 const initialState: TasksInterface = {
-  tasks: [],
+  tasks: [{ caption: "Task 1" }, { caption: "Task 2" }],
 };
 
 const taskSlice = createSlice({
@@ -17,7 +17,7 @@ const taskSlice = createSlice({
   initialState,
   reducers: {
     setTask: (state, action: PayloadAction<Task>) => {
-      state.tasks.push(action.payload);
+      state.tasks = [...state.tasks, action.payload];
     },
   },
 });
