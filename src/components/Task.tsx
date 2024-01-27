@@ -1,6 +1,6 @@
 import { Checkbox } from "@nextui-org/react";
 
-const Task = ({ caption = "", active = false }) => {
+const Task = ({ caption = "" }) => {
   return (
     <li className="border-t-1 py-4">
       <Checkbox radius="sm">{caption}</Checkbox>
