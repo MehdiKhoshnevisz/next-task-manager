@@ -9,7 +9,7 @@ interface TasksInterface {
 }
 
 const initialState: TasksInterface = {
-  tasks: [{ caption: "Task 1" }, { caption: "Task 2" }],
+  tasks: [{ caption: "Task todo 1" }, { caption: "Task todo 2" }],
 };
 
 const taskSlice = createSlice({
